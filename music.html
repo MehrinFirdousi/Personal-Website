@@ -1,0 +1,178 @@
+<html>
+<head>
+  <title>Music | Hiraeth</title>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="all\menu.css" type="text/css" charset="utf-8" />
+  <style>
+    body{
+      font-family: 'Montserrat', sans-serif;
+      background-image: url("all/prettyy-blurred.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-left: 0px;
+      margin-right: 0px;
+      letter-spacing: 0.5px;
+    }
+
+    #albumart{
+      border: solid 0px white;
+      border-radius: 30px;
+      margin: 80 0 0 34;
+      box-shadow: 0 8px 30px -8px black;
+      float:left;
+    }
+
+    .songs{
+      float:left;
+      margin: 52 10 0 30;
+      color:white;
+    }
+
+    h1 {
+      font-weight:normal;
+      margin-bottom:0px;
+      letter-spacing: 1.5px;
+      font-size:32px;
+    }
+
+    h3 {
+      font-weight:normal;
+      margin:8 0 20 0;
+      letter-spacing: 1.25px;
+      font-size:20px;
+    }
+
+    #songslist {
+      width: 960px;
+      height: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 2px;
+      background-color: rgba(0,0,0, 0.6);
+      border-radius: 8px;
+    }
+
+    .songImage {
+      border-radius: 16px;
+      height: 82px;
+      width:82px;
+      margin:8px;
+    }
+
+    .songTitle{
+      vertical-align: bottom;
+      padding-left: 15px;
+      font-size: 18px;
+    }
+
+    .active, .songTitle:hover {
+      color: pink;
+      cursor: default;
+    }
+
+    audio{
+      width: 830px; /*295%*/
+      padding: 0 10 0 10;
+      height:50px;
+    }
+
+    td {
+      padding: 1px;
+      vertical-align: middle;
+      height:20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a href="index.html" class="name tooltip" target="_self">
+      <img src="all\Hiraeth-1.svg" height="50px" width="100px">
+      <span class="tooltiptext">Home</span>
+    </a>
+    <div class="options">
+      <a href="aboutme.html" target="_self" class="links">About Me</a>
+      <a href="resume.html" target="_self" class="links">Resume</a>
+      <a href="artgallery.html" target="_self" class="links">Art Gallery</a>
+      <a href="projects.xml" target="_self" class="links">Projects</a>
+      <a href="music.html" target="_self" style="color:#ffda6b;" class="links">Music</a>
+      <a href="reviews.html" target="_self" class="links">Reviews</a>
+      <a href="photography.html" target="_self" class="links">Photography</a>
+    </div>
+    <a href="https://www.instagram.com/hir.aeth/" target="_blank" class="links" style="margin:30 0 0 90; height:25px; width:25px;">
+      <img src="all\instalogo-white.svg" height="25px" width="25px" style="padding-top:18;">
+    </a>
+  </div>
+
+  <img src="musiccontent\piano girl.jpg" id="albumart" height="635px" width="475px">
+  <div class="songs">
+    <h1>Piano Covers</h1>
+    <h3>By Mehrin Firdousi</h3>
+    <p style="margin:8 0 20 0;">Genre - Mixed, Classical, Alternative</p>
+
+    <div id="songslist">
+      <table border=0 style="color: white;">
+       <tr>
+        <td rowspan="2"><img class="songImage" src="musiccontent\clairdelune.jpg"></td>
+        <td class="songTitle">Claude Debussy - Clair De Lune</td>
+       </tr>
+       <tr>
+        <td><audio src="musiccontent\ClairDeLune.mp4" type="audio/mpeg" onplay="showActiveSong()" controls></audio></td>
+       </tr>
+       <tr>
+        <td rowspan="2"><img class="songImage" src="musiccontent\sasageyo.jpg"></td>
+        <td class="songTitle">Linked Horizon - Shinzou Sasageyo</td>
+       </tr>
+       <tr>
+        <td><audio src="musiccontent\Sasageyo.mp4" type="audio/mpeg" onplay="showActiveSong()" controls></audio></td>
+       </tr>
+       <tr>
+        <td rowspan="2"><img class="songImage" src="musiccontent\glassysky.jpg"></td>
+        <td class="songTitle">Tokyo Ghoul - Glassy Sky</td>
+       </tr>
+       <tr>
+        <td><audio src="musiccontent\GlassySky.mp4" type="audio/mpeg" onplay="showActiveSong()" controls></audio></td>
+       </tr>
+       <tr>
+        <td rowspan="2"><img class="songImage" src="musiccontent\marriedlife.jpg"></td>
+        <td class="songTitle">Michael Giacchino - Married Life</td>
+       </tr>
+       <tr>
+        <td><audio src="musiccontent\MarriedLife.mp4" type="audio/mpeg" onplay="showActiveSong()" controls></audio></td>
+       </tr>
+       <tr>
+        <td rowspan="2"><img class="songImage" src="musiccontent\lalaland.jpg"></td>
+        <td class="songTitle">La La Land - Mia and Sebastian</td>
+       </tr>
+       <tr>
+        <td><audio src="musiccontent\MiaAndSebastian.mp4" type="audio/mpeg" onplay="showActiveSong()" controls></audio></td>
+       </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+  function showActiveSong()
+    { var songTitleArray = document.getElementsByClassName("songTitle");
+      var songsArray = document.getElementsByTagName("audio")
+
+      document.addEventListener('playing', function(e){
+      for(var i = 0, len = songsArray.length; i < len; i++){
+          if(songsArray[i] != e.target){
+              songsArray[i].pause();
+              songsArray[i].currentTime = 0;
+          }
+          else if(songsArray[i] == e.target){
+              var current = document.getElementsByClassName("active");
+              if (current.length > 0)
+                  current[0].className = current[0].className.replace(" active", "");
+              songTitleArray[i].className += " active"
+          }
+        }
+      }, true);
+    }
+  </script>
+</body>
+</html>

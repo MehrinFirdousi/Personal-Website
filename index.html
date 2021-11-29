@@ -1,0 +1,167 @@
+<html>
+<head>
+  <title>Home | Hiraeth</title>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="all\menu.css" type="text/css" charset="utf-8" />
+  <style>
+    body{
+      background-image: url("homecontent/me-wallpaper1.png");
+      background-attachment:fixed;
+      font-family: 'Montserrat', sans-serif;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-left: 0px;
+      margin-right: 0px;
+      letter-spacing: 0.5px;
+      color: white;
+      font-weight: 50px;
+    }
+
+    .menu{
+      background-color: rgba(0,0,0,0.65);
+    }
+
+    .header{
+      margin-left: 15%;
+      margin-top:150px;
+      height:400px;
+      width:45%;
+    }
+
+    .header .head {
+      letter-spacing: 3px;
+      font-size: 70px;
+      position: relative;
+      animation: moveHeader 1.5s;
+      animation-fill-mode: forwards;
+      animation-delay: 0.5s;
+      opacity: 0;
+    }
+
+    .header .sub {
+      letter-spacing: 3px;
+      font-size: 30px;
+      margin: 25 0;
+      position: relative;
+      animation: moveSubHeader 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 1.2s;
+      opacity: 0;
+    }
+
+    .header .aboutButton {
+      background-color: transparent;
+      margin-top: 30px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      border: none;
+      color: white;
+      outline: none;
+      position: relative;
+      height: 57px;
+      width: 190px;
+      opacity:0;
+      animation: moveButton 1.2s;
+      animation-fill-mode: forwards;
+      animation-delay: 1.2s;
+    }
+
+    .aboutButton:before, .aboutButton:after {
+      transition-duration: 1s;
+      content: '';
+      height: 19px;
+      position: absolute;
+      width: 19px;
+    }
+
+    .aboutButton:before {
+      border-bottom: 3px solid #9c6e4f;
+      border-right: 3px solid #9c6e4f;
+      bottom: -3px;
+      right: -3px;
+    }
+
+    .aboutButton:after {
+      border-top: 3px solid #9c6e4f;
+      border-left: 3px solid #9c6e4f;
+      top: -3px;
+      left: -3px;
+    }
+
+    .aboutButton:hover:before, .aboutButton:hover:after {
+      width: 106%;
+      height:120%;
+    }
+
+    .aboutButton:hover {
+      background-color: rgba(5,5,5,0.3);
+      transition-duration: 1s;
+    }
+
+    hr {
+     border-top: 1px;
+     border-color: #9c6e4f;
+     margin-left: -2%;
+     animation: expand 1s ease-in-out;
+   }
+
+   @keyframes moveHeader {
+     from {top: 0px;}
+     to {top: 100px; opacity:1;}
+   }
+   @keyframes moveSubHeader {
+     from {top: 20px;}
+     to {top: 100px; opacity:1;}
+   }
+
+   @keyframes moveMenu {
+     from {top: -5%;}
+     to {top: 0px; opacity:1;}
+   }
+
+   @keyframes moveButton {
+     from {top: 0px;}
+     to {top: 0px; opacity:1;}
+   }
+
+   @keyframes expand {
+     from {transform: scaleX(0);}
+     to {transform: scaleX(1);}
+   }
+
+</style>
+</head>
+<body>
+
+      <div class="menu">
+        <a href="index.html" class="name tooltip" target="_self">
+          <img src="all\Hiraeth-1.svg" height="50px" width="100px">
+          <span class="tooltiptext">Home</span>
+        </a>
+        <div class="options">
+          <a href="aboutme.html" target="_self" class="links">About Me</a>
+          <a href="resume.html" target="_self" class="links">Resume</a>
+          <a href="artgallery.html" target="_self" class="links">Art Gallery</a>
+          <a href="projects.xml" target="_self" class="links">Projects</a>
+          <a href="music.html" target="_self" class="links">Music</a>
+          <a href="reviews.html" target="_self" class="links">Reviews</a>
+          <a href="photography.html" target="_self" class="links">Photography</a>
+        </div>
+        <a href="https://www.instagram.com/hir.aeth/" target="_blank" class="links" style="margin:30 0 0 90; height:25px; width:25px;">
+          <img src="all\instalogo-white.svg" height="25px" width="25px" style="padding-top:18;">
+        </a>
+      </div>
+
+      <div class="header">
+        <span class="head">Mehrin Firdousi</span><br />
+        <p class="sub">CS Student | Artist</p><br />
+        <br /><br /><br /><br /><hr />
+        <form action="aboutme.html">
+          <button class="aboutButton">Get to know me</button>
+        </form>
+      </div>
+
+</body>
+</html>

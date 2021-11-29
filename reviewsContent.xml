@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE reviewsContent [
+  <!ELEMENT reviewList (review+)>
+  <!ELEMENT review (image, title, creator, rating, description)>
+  <!ELEMENT image (#PCDATA)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT creator (#PCDATA)>
+  <!ELEMENT rating (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+  <!ATTLIST review reviewCategory CDATA #REQUIRED>
+]>
+
+<reviewList>
+
+  <review reviewCategory="book">
+    <image>reviewscontent\book1.jpg</image>
+    <title>Tuesdays With Morrie</title>
+    <creator>Mitch Albom</creator>
+    <rating>9.6/10</rating>
+    <description>To me, this is a book you can pick any chapter of, any day, any time and completely destress. This is a book that I would consider a perfect gift because Morrie's story is one definitely worth sharing and learning from. Every chapter gets extremely thought-provoking and intriguing, it is loaded with wisdom and life-lessons. </description>
+  </review>
+
+  <review reviewCategory="anime">
+    <image>reviewscontent\anime1.jpg</image>
+    <title>The Promised Neverland</title>
+    <creator>Kaiu Shirai</creator>
+    <rating>9.8/10</rating>
+    <description>Filled with plot-twists right from the start, every episode of this eerie psychological thriller had me on edge because the audience is constantly challenged to understand what the show is truly about. It is a new take on shounen anime culture, with exceptional plot development and character writing.</description>
+  </review>
+
+  <review reviewCategory="movie">
+    <image>reviewscontent\movie4.jpg</image>
+    <title>Bohemian Rhapsody</title>
+    <creator>Bryan Singer</creator>
+    <rating>9.3/10</rating>
+    <description>As a memento for Freddie Mercury and Queen, this movie delivered the legendary band's operatic storytelling through their music, remarkably. I personally found this movie incredibly moving and learned a thing or two about being a musician from this 80's icon, being an aspiring pianist myself. </description>
+  </review>
+
+  <review reviewCategory="movie">
+    <image>reviewscontent\movie5.jpg</image>
+    <title>Miracle in Cell No. 7</title>
+    <creator>Mehmet Ada Öztekin</creator>
+    <rating>9.1/10</rating>
+    <description>A hard-hitting story of a mentally-ill father who has been sentenced a death penalty for a murder he did not commit and his daughter. I consider it a cinematic wonder for its phenomenal story-telling, each one of Memo's cellmates is a character with incredible depth. The cinematography is also notably magnificant.</description>
+  </review>
+
+  <review reviewCategory="book">
+    <image>reviewscontent\book2.jpg</image>
+    <title>Goat Days</title>
+    <creator>Benyamin</creator>
+    <rating>9.5/10</rating>
+    <description>An absolute eye-opener to on-going privilege related disparities in our society. The story starts off as a man dreaming of a better life in the Gulf, only to be faced by a nightmarish reality. Najeeb's life in the desert is an engaging tale about survival, one where he considered even prison to be a better place for him, compared to his life as an abused immigrant worker.</description>
+  </review>
+
+  <review reviewCategory="movie">
+    <image>reviewscontent\movie2.jpg</image>
+    <title>Hacksaw Ridge</title>
+    <creator>Mel Gibson</creator>
+    <rating>9.2/10</rating>
+    <description>True story of Desmond Doss, an army medic who refused to bear arms during the World War II, on grounds of his pacifist morals, and still won the medal of honor for saving 75 men and even showing compassion to helpless soldiers belonging to the opposing country. This movie had lots of heart-warming moments, as Doss was a man who believed in true peace.</description>
+  </review>
+
+  <review reviewCategory="book">
+    <image>reviewscontent\book3.jpg</image>
+    <title>Gone Girl</title>
+    <creator>Gillian Flynn</creator>
+    <rating>9.3/10</rating>
+    <description>One of my favourite reads in the crime genre, this book is definitely an ingeniously plotted thriller, one that makes you question your trust for even those you consider closest to you. Every chapter is an enthralling page-turner as the story starts with a seemingly perfect couple, that evolves into a slow revelation of each of their dark and twisted natures beneath.</description>
+  </review>
+
+  <review reviewCategory="anime">
+    <image>reviewscontent\anime2.jpg</image>
+    <title>Haikyuu</title>
+    <creator>Haruichi Furudate</creator>
+    <rating>9.4/10</rating>
+    <description>One of my all time favourite on-going series; the characters are interesting enough to keep you hooked after just a few episodes, and what I personally love the most about this show is how all side characters are equally important, even aside from Karasuno, and are given as much scope for character development, truly sealing the idea of real sportsmanship. Its impressive enough to make someone as inactive as me to consider getting into sports.</description>
+  </review>
+
+  <review reviewCategory="movie">
+    <image>reviewscontent\movie3.jpeg</image>
+    <title>The Greatest Showman</title>
+    <creator>Michael Gracey</creator>
+    <rating>8.9/10</rating>
+    <description>Since high-school, I have been fascinated by musical theatre because of how I saw it bringing people of different backgrounds together. This movie was one such depiction of the beauty of theatre and show business, through P T Barnum's circus and his struggles. Althought not a 100% perfect, this biopic never failed to impress owing to the stellar performances/stunts shown.</description>
+  </review>
+</reviewList>

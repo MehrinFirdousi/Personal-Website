@@ -1,0 +1,286 @@
+<html>
+<head>
+  <title>Photography | Hiraeth</title>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="moontime-font\stylesheet.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="all\menu.css" type="text/css" charset="utf-8" />
+  <script type="text/javascript" src="all\animateOnScroll.js"></script>
+  <style>
+
+    body{
+      font-family: 'Montserrat', sans-serif;
+      margin:0;
+      letter-spacing: 0.5px;
+      height: 100%;
+    }
+
+    .bgimg-1, .bgimg-2 {
+      position: relative;
+      background-attachment: fixed;
+      background-position: 10% 35%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: auto;
+    }
+
+    .bgimg-1 {
+      background-image: url("photographycontent/photography-or1.JPG");
+      min-height: 69%;
+      opacity: 0.85;
+      background-position: 0% 52%;
+    }
+
+    .bgimg-2 {
+      background-image: url("photographycontent/sakura-blur1.jpg");
+      min-height: 350%;
+      overflow:visible;
+      float:left;
+      color:white;
+      padding: 1.7% 5%;
+    }
+
+    .header {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 97%;
+      text-align: center;
+      animation: moveHeader 1s;
+      animation-fill-mode: forwards;
+      animation-duration: 1.6s;
+      opacity: 0;
+      color: white;
+      padding: 18px;
+      font-size: 25px;
+      letter-spacing: 9px;
+    }
+
+    @keyframes moveHeader {
+      from {top: 52%;}
+      to {top: 50%; opacity:1;}
+    }
+
+    .description {
+      color: #777;
+      background-color: rgba(0,0,0,0.85);
+      text-align:center;
+      padding:50px 80px;
+      text-align: justify;
+    }
+
+    .toAnimate{
+      opacity:0.2;
+      letter-spacing: 1px;
+      overflow: hidden;
+      color: #ababab;
+    }
+
+    .isVisible {
+      animation: movePara 1.5s;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+    }
+
+    @keyframes movePara {
+      from {transform: scaleX(0.95);}
+      to {transform: scaleX(1); opacity: 1;}
+    }
+
+    h3 {
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      font-family: 'Alegreya Sans SC', 'Calibri';
+      color: white;
+      font-size: 19px;
+      font-weight: normal;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 0px;
+    }
+
+    .column {
+      flex: 25%;
+      max-width: 50%;
+      padding: 0 20px;
+    }
+
+    .column img {
+      vertical-align: middle;
+      width: 99%;
+      border-radius: 4px;
+      box-shadow: 0 8px 30px -8px black;
+      border: solid 8px white;
+      border-bottom: solid 60px white;
+    }
+
+    .photo {
+      position: relative;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: -11px;
+      top: auto;
+      left: 50%;
+      color: black;
+      width:100%;
+      transform: translate(-50%, -50%);
+      font-family: 'moontimeregular', 'Montserrat';
+      font-size: 33px;
+    }
+
+    figure {
+    	overflow: hidden;
+      vertical-align: middle;
+      width: 99%;
+      margin-left:0px;
+      border-right: solid 8px white;
+      border-radius: 4px;
+    }
+
+    .shine figure {
+    	position: relative;
+    }
+
+    .shine figure::before {
+    	position: absolute;
+    	left: -80%;
+    	content: '';
+    	width: 50%;
+    	height: 100%;
+    	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+    	transform: skewX(-27deg);
+    }
+
+    .shine figure:hover::before {
+    	animation: shine 0.75s;
+    }
+
+    @keyframes shine {
+      to {left: 125%;}
+    }
+
+</style>
+</head>
+<body>
+    <div class="bgimg-1">
+      <div class="header">
+      <span>&#9487; eyes like a shutter &#9499;</span>
+      </div>
+    </div>
+
+    <div class="description">
+      <h3 style="text-align:center;">My Travel Photography</h3>
+      <p class="toAnimate">Photography has grown to become one of my biggest interests, and in my opinion, a great form of creative expression. Below is a gallery showing the photography I've done over the years traveling to different places, capturing moments that I felt were worth looking back to and sharing. Pictures shown are shot either on a Nikon DSLR (D5300) or an iPhone.</p>
+    </div>
+
+    <div class="bgimg-2">
+      <div class="row">
+        <div class="column">
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo7.jpg" ></figure>
+            <div class="caption">Tblisi - Sleepy Cats</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo10.jpg" ></figure>
+            <div class="caption">Salalah - Sunny hill</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo6.jpg" ></figure>
+            <div class="caption">Edavenakkad - Grandmother</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo12.jpg" ></figure>
+            <div class="caption">Mtskheta - Unwind</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo14.jpg" ></figure>
+            <div class="caption">Makkah - Old city</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo16.jpg" ></figure>
+            <div class="caption">Salalah - Family of 100</div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo1.jpg" ></figure>
+            <div class="caption">Tblisi - Dog of the Day</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo2.jpg" ></figure>
+            <div class="caption">Wayanad - Rain web</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo8.jpg" ></figure>
+            <div class="caption">Gudauri - Pine cones</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo11.jpg" ></figure>
+            <div class="caption">Mtskheta - Veni, Vidi, Cepi</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo17.jpg" ></figure>
+            <div class="caption">Salalah - Wilderness</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo19.jpg" ></figure>
+            <div class="caption">Fujairah - Road trip</div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo4.jpg" ></figure>
+            <div class="caption">Valparai - Fearless</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo3.jpg" ></figure>
+            <div class="caption">Munnar - Silent hill</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo9.jpg" ></figure>
+            <div class="caption">Highway - Asymmetry</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo18.jpg" ></figure>
+            <div class="caption">Salalah - Trapped</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo5.jpg" ></figure>
+            <div class="caption">Ooty - Find bliss</div>
+          </div>
+          <div class="photo shine">
+            <figure><img src="photographycontent\photo15.jpg" ></figure>
+            <div class="caption">Kochi - Fishing day</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu">
+      <a href="index.html" class="name tooltip" target="_self">
+        <img src="all\Hiraeth-1.svg" height="50px" width="100px">
+        <span class="tooltiptext">Home</span>
+      </a>
+      <div class="options">
+        <a href="aboutme.html" target="_self" class="links">About Me</a>
+        <a href="resume.html" target="_self" class="links">Resume</a>
+        <a href="artgallery.html" target="_self" class="links">Art Gallery</a>
+        <a href="projects.xml" target="_self" class="links">Projects</a>
+        <a href="music.html" target="_self" class="links">Music</a>
+        <a href="reviews.html" target="_self" class="links">Reviews</a>
+        <a href="photography.html" target="_self" style="color:#ffda6b;" class="links">Photography</a>
+      </div>
+      <a href="https://www.instagram.com/hir.aeth/" target="_blank" class="links" style="margin:30 0 0 90; height:25px; width:25px;">
+        <img src="all\instalogo-white.svg" height="25px" width="25px" style="padding-top:18;">
+      </a>
+    </div>
+
+</body>
+</html>

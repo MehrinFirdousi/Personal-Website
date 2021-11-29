@@ -1,0 +1,204 @@
+<html>
+<head>
+  <title>Reviews | Hiraeth</title>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="all\menu.css" type="text/css" charset="utf-8" />
+  <style>
+
+    body{
+      background-image: url("reviewscontent/girlbg2.jpg");
+      background-attachment:fixed;
+      font-family: 'Montserrat', sans-serif;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-left: 0px;
+      margin-right: 0px;
+      letter-spacing: 0.5px;
+      color: white;
+      font-weight: 50px;
+    }
+
+    h1 {
+      font-weight:normal;
+      margin-bottom:0px;
+      font-size:36px;
+      padding-top: 4px;
+      letter-spacing: 5px;
+      text-shadow: 3px 3px 3px black;
+    }
+
+    .reviewMenu {
+      width: 94%;
+      color:white;
+      margin-left: 3%;
+      padding: 16px;
+      margin-top: 3%;
+    }
+
+    .subOptions {
+      border: 0px;
+      border-radius: 2px;
+      margin-left: 0px;
+      margin-right: 0px;
+      height: 6%;
+      width: 10%;
+      background-color: rgba(0,0,0,0.7);
+      font-family: 'Alegreya Sans SC', 'Calibri';
+      color: white;
+      letter-spacing: 3px;
+      font-size: 16px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .active, .subOptions:hover {
+      background-color: #936579;
+      outline:none
+    }
+
+    #result{
+      border-radius: 10px;
+      margin: 0 62 40 62;
+      color:white;
+      background-color: rgba(0,0,0,0.7);
+      padding: 25px;
+      width:90%;
+      height:auto;
+    }
+
+    .moveIn{
+      animation: moveTable 1.5s;
+      animation-fill-mode: forwards;
+      animation-duration: 0.7s;
+      opacity: 0.5;
+    }
+
+    @keyframes moveTable {
+      from {margin-top: 1%;}
+      to {margin-top: 0%; opacity:1;}
+    }
+
+    td {
+      padding: 10px;
+      vertical-align: middle;
+    }
+
+</style>
+</head>
+<body onload="getReviewsAjax('all')">
+    <div class="menu">
+      <a href="index.html" class="name tooltip" target="_self">
+        <img src="all\Hiraeth-1.svg" height="50px" width="100px">
+        <span class="tooltiptext">Home</span>
+      </a>
+      <div class="options">
+        <a href="aboutme.html" target="_self" class="links">About Me</a>
+        <a href="resume.html" target="_self" class="links">Resume</a>
+        <a href="artgallery.html" target="_self" class="links">Art Gallery</a>
+        <a href="projects.xml" target="_self" class="links">Projects</a>
+        <a href="music.html" target="_self" class="links">Music</a>
+        <a href="reviews.html" target="_self" style="color:#ffda6b;" class="links">Reviews</a>
+        <a href="photography.html" target="_self" class="links">Photography</a>
+      </div>
+      <a href="https://www.instagram.com/hir.aeth/" target="_blank" class="links" style="margin:30 0 0 90; height:25px; width:25px;">
+        <img src="all\instalogo-white.svg" height="25px" width="25px" style="padding-top:18;">
+      </a>
+    </div>
+    <div class="reviewMenu">
+      <h1><b>reviews<b></h1>
+      <br />
+      <button class="subOptions active" onclick="getReviewsAjax('all')">All</button>
+      <button class="subOptions" onclick="getReviewsAjax('movie')">Movies</button>
+      <button class="subOptions" onclick="getReviewsAjax('anime')">Anime</button>
+      <button class="subOptions" onclick="getReviewsAjax('book')">Books</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+    var buttonArray = document.getElementsByClassName("subOptions");
+    for (var i = 0; i < buttonArray.length; i++) {
+      buttonArray[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      if (current.length > 0) {
+          current[0].className = current[0].className.replace(" active", "");
+      }
+      this.className += " active";
+      });
+    }
+
+    function getReviewsAjax(category)
+    {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+      if (xhttp.readyState == 4 && xhttp.status == 200)
+          {
+            processReviews(xhttp, category);
+          }
+      };
+      xhttp.open("GET", "http://localhost/reviewsContent.xml", false);
+      xhttp.send();
+    }
+
+      function processReviews(xhttp, category)
+      { var xmlDoc = xhttp.responseXML;
+        var reviewsArray=parseXML(xmlDoc, category);
+        displayReviews(reviewsArray);
+      }
+
+      function parseXML(xmlDoc, category)
+      {
+        var reviewElements = xmlDoc.getElementsByTagName("review");
+        var reviewsArray = [];
+        if(category!='all')
+            { for(var i=0; i<reviewElements.length; i++)
+                    if(reviewElements[i].getAttribute("reviewCategory")==category)
+                        { var review = {};
+                          review.image = reviewElements[i].getElementsByTagName("image")[0].childNodes[0].nodeValue;
+                          review.title = reviewElements[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+                          review.creator = reviewElements[i].getElementsByTagName("creator")[0].childNodes[0].nodeValue;
+                          review.rating = reviewElements[i].getElementsByTagName("rating")[0].childNodes[0].nodeValue;
+                          review.description = reviewElements[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                          reviewsArray.push(review);
+                        }
+            }
+        else if(category=='all')
+          for(var i=0; i<reviewElements.length; i++)
+              { var review = {};
+                review.image = reviewElements[i].getElementsByTagName("image")[0].childNodes[0].nodeValue;
+                review.title = reviewElements[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+                review.creator = reviewElements[i].getElementsByTagName("creator")[0].childNodes[0].nodeValue;
+                review.rating = reviewElements[i].getElementsByTagName("rating")[0].childNodes[0].nodeValue;
+                review.description = reviewElements[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                reviewsArray.push(review);
+              }
+        return reviewsArray;
+      }
+
+      function displayReviews(reviewsArray)
+      {
+        var tableContents = "<table class='moveIn'>";
+        for(var i=0; i<reviewsArray.length; i++)
+        {
+           tableContents += "<tr>";
+           tableContents += "<td rowspan=3 width='10%'>" + "<img style='padding: 10px;' src='" + reviewsArray[i].image +"' height='200' width='143'/>"+ "</td>";
+           tableContents += "<td style='font-size:32px;'>" + reviewsArray[i].title + "</td>";
+           tableContents += "<td style='font-size:32px; color: pink;' align='right'>" + reviewsArray[i].rating + "</td>";
+           tableContents += "</tr>";
+           tableContents += "<tr>";
+           tableContents += "<td colspan=2 align='left' width='80%' style='font-size:25px; vertical-align: top;'>" + reviewsArray[i].creator + "</td>";
+           tableContents += "</tr>";
+           tableContents += "<tr>";
+           tableContents += "<td align='left' colspan='2'>" + reviewsArray[i].description + "</td>";
+           tableContents += "</tr>";
+         }
+         tableContents += "</table>";
+         document.getElementById("result").innerHTML = tableContents;
+      }
+
+    </script>
+
+</body>
+</html>

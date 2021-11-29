@@ -1,0 +1,386 @@
+<html>
+<head>
+  <title>About Me | Hiraeth</title>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="all\menu.css" type="text/css" charset="utf-8" />
+  <script type="text/javascript" src="all\animateOnScroll.js"></script>
+  <style>
+
+    body{
+      font-family: 'Montserrat', sans-serif;
+      margin:0;
+      letter-spacing: 0.5px;
+      height: 100%;
+    }
+
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+      position: relative;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: auto;
+    }
+    .bgimg-1 {
+      background-image: url("aboutmecontent/home4.jpg");
+      min-height: 75%;
+      background-position: 0% 67%;
+    }
+    .bgimg-2 {
+      background-image: url("aboutmecontent/kerala.jpg");
+      min-height: 400px;
+      opacity: 1;
+    }
+    .bgimg-3 {
+      background-image: url("aboutmecontent/school1.jpg");
+      background-position: 0% 10%;
+      min-height: 400px;
+    }
+
+    .bgimg-4 {
+      background-image: url("all/girlbg-blurred.jpg");
+      background-position: 0% 40%;
+      min-height: 400px;
+    }
+
+    .caption {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      color: #000;
+      animation: moveHeader 1.2s;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+      opacity:0;
+    }
+
+    @keyframes moveHeader {
+      from {top: 52%;}
+      to {top: 50%; opacity:1;}
+    }
+
+    .caption .border {
+      letter-spacing: 8px;
+      color: white;
+      padding: 18px;
+      font-size: 25px;
+    }
+
+    h3 {
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      font-family: 'Alegreya Sans SC', 'Calibri';
+      color: white;
+      font-size: 18px;
+      font-weight: normal;
+      text-align:center;
+    }
+
+    .description{
+      background-color: #231e29;
+      opacity: 1;
+      text-align:center;
+      padding:34 80 34 80;
+      text-align: justify;
+      overflow: hidden;
+    }
+
+    .toAnimate{
+      opacity:0.2;
+      color: #bdbdbd;
+      letter-spacing: 1px;
+      overflow: hidden;
+    }
+
+    .isVisible {
+      animation: movePara 1.5s;
+      animation-fill-mode: forwards;
+      animation-duration: 1.2s;
+    }
+
+    @keyframes movePara {
+      from {transform: scaleX(0.95);}
+      to {transform: scaleX(1); opacity: 1;}
+    }
+
+    .message{
+      color: white;
+      text-align:center;
+      padding:50px 80px;
+    }
+
+    .contactForm{
+      color: white;
+      text-align:left;
+      margin-left: 28.5%;
+    }
+
+    .sendButton {
+      background-color: rgba(255,219,226,0.35);
+      border-top-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      margin-top: 30px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      border: none;
+      color: white;
+      outline: none;
+      position: relative;
+      height: 40px;
+      width: 100px;
+    }
+
+    .sendButton:before, .sendButton:after {
+      border: 0 solid transparent;
+      transition-duration: 1s;
+      content: '';
+      height: 19px;
+      position: absolute;
+      width: 25px;
+    }
+
+    .sendButton:before {
+      border-bottom: 3px solid #e797a6;
+      border-right: 3px solid #e797a6;
+      bottom: -3px;
+      right: -3px;
+    }
+
+    .sendButton:after {
+      border-top: 3px solid #e797a6;
+      border-left: 3px solid #e797a6;
+      top: -3px;
+      left: -3px;
+    }
+
+    .sendButton:hover:before, .sendButton:hover:after {
+      width: 109%;
+      height:120%;
+    }
+
+    .sendButton:hover {
+      background-color: rgba(0,0,0,0.5);
+      transition: 1s;
+    }
+
+    label {
+      vertical-align: top;
+      display:inline-block;
+      width: 110px;
+      text-align: left;
+    }
+    textarea{
+      vertical-align: top;
+      display:inline-block;
+      width:357px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type=text]{
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      height: 25px;
+    }
+
+    .errorMsg{
+      color: #fb8f50;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+
+    #successful{
+      color: lightgreen;
+      font-weight: bold;
+    }
+
+    .showSuccess{
+      animation: successMsg 1.5s;
+      animation-fill-mode: forwards;
+      animation-duration: 1.2s;
+    }
+
+    @keyframes successMsg {
+      from{opacity: 0;}
+      to{opacity: 1;}
+    }
+
+
+</style>
+</head>
+<body>
+
+      <div class="bgimg-1">
+        <div class="caption">
+        <span class="border">&#9487; personal background &#9499;</span>
+        </div>
+      </div>
+
+      <div class="description">
+        <h3>Get to know me</h3>
+        <p class="toAnimate" style="animation-delay: 0.2s; opacity: 0.2;">
+          Hi, I'm Mehrin Firdousi, and I'm a Computer Science student. I was born and brought up in Abu Dhabi, United Arab Emirates. As far as academics are concerned, nothing keeps me as engaged as coding and problem-solving, solely because of the immeasurable possibilities I come across every time. I see it as something more than just my major, and although I've barely scratched the surface yet, I aspire to become proficient at creating solutions to real-life problems through my code and creativity. Besides CS, my core interests and skills are centered around art, photography, music, and writing. I personally consider pursuing these activities just as important as performing well in my CS courses, as I believe these are the things that truly make me who I am.
+        </p>
+      </div>
+
+      <div class="bgimg-2">
+        <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">HOMELAND</span>
+        </div>
+      </div>
+
+      <div class="description">
+        <h3>Where I'm from</h3>
+        <p class="toAnimate">
+          I am from Kerala, India. Travelling back home every year is definitely something I look forward to, that I've missed this year due to COVID-19. I find the environment there therapeutic in a way; it's a bit of an escape from all the bustle we have here in the UAE. My father is from Thrissur, while my mom is from Ernakulam, both of which are special homes to me.
+        </p>
+      </div>
+
+      <div class="bgimg-3">
+        <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCHOOL</span>
+        </div>
+      </div>
+
+      <div class="description">
+        <h3>Where I went to school</h3>
+        <p class="toAnimate">
+          I studied at Abu Dhabi Indian School, Abu Dhabi, from Grade I to XII. School was where I met the people who are a big part of my life now, and where I think I learned the most about myself, including strengths, weaknesses, abilities and interests. School clubs are what primarily shaped my interests and allowed me to nurture my skills in photography, art and instrumental music.
+        </p>
+      </div>
+
+      <div class="bgimg-4">
+        <div class="message">
+          <h3 style="text-align:center; font-family: 'Montserrat', sans-serif;">Get in touch!</h3><br />
+            <form onsubmit="return validateForm()">
+              <div class="contactForm">
+                <label>Email</label>
+                <input type="text" id="email" size="50"><span id="emailError" class="errorMsg"></span><br /><br />
+                <label>Name</label>
+                <input type=text id="name" size="50"><span id="nameError" class="errorMsg"></span><br /><br />
+                <label>Message</label>
+                <textarea id="message" cols="46" rows="5"></textarea><span id="messageError" class="errorMsg"><br ><br />
+              </div>
+              <button class="sendButton">Send</button><br /><br />
+              <span id="successful"></span>
+            </form>
+        </div>
+      </div>
+
+      <div class="menu">
+        <a href="index.html" class="name tooltip" target="_self">
+          <img src="all\Hiraeth-1.svg" height="50px" width="100px">
+          <span class="tooltiptext">Home</span>
+        </a>
+        <div class="options">
+          <a href="aboutme.html" target="_self" style="color:#ffda6b;" class="links">About Me</a>
+          <a href="resume.html" target="_self" class="links">Resume</a>
+          <a href="artgallery.html" target="_self" class="links">Art Gallery</a>
+          <a href="projects.xml" target="_self" class="links">Projects</a>
+          <a href="music.html" target="_self" class="links">Music</a>
+          <a href="reviews.html" target="_self" class="links">Reviews</a>
+          <a href="photography.html" target="_self" class="links">Photography</a>
+        </div>
+        <a href="https://www.instagram.com/hir.aeth/" target="_blank" class="links" style="margin:30 0 0 90; height:25px; width:25px;">
+          <img src="all\instalogo-white.svg" height="25px" width="25px" style="padding-top:18;">
+        </a>
+      </div>
+
+  <script>
+  function validateForm()
+  { var email = document.getElementById('email');
+    var name = document.getElementById('name');
+    var message = document.getElementById('message');
+    var eflag=0;
+    var nflag=0;
+    var mflag=0;
+    if(/^[A-Za-z][A-Za-z0-9]+(\.?[A-Za-z0-9]+|-?[A-Za-z0-9]+)@[A-Za-z]+(-[A-Za-z]+)?\.[A-Za-z]{2,3}(\.[A-Za-z]{2,3})?$/.test(email.value) == false)
+        {
+          document.getElementById('emailError').innerHTML=("* Email does not match the required format.");
+          email.style.border="2px solid #fb8f50";
+          document.getElementById('successful').innerHTML=("");
+          eflag=1;
+        }
+
+    if(/^\s+$/.test(name.value)==true || name.value == "" || name.value == null)
+        {
+          document.getElementById('nameError').innerHTML=("* Name cannot be empty.");
+          name.style.border="2px solid #fb8f50";
+          document.getElementById('successful').innerHTML=("");
+          nflag=1;
+        }
+
+    if(/^\s+$/.test(message.value)==true || message.value == "" || name.value == null)
+        {
+          document.getElementById('messageError').innerHTML=("* Message cannot be empty.");
+          message.style.border="2px solid #fb8f50";
+          document.getElementById('successful').innerHTML=("");
+          mflag=1;
+        }
+
+    if(eflag==1)
+    {
+      if(nflag==0)
+        {
+          document.getElementById('name').style.border="1px solid #ccc";
+          document.getElementById('nameError').innerHTML=("");
+        }
+      if(mflag==0)
+        {
+          document.getElementById('message').style.border="1px solid #ccc";
+          document.getElementById('messageError').innerHTML=("");
+        }
+      return false;
+    }
+
+    if(nflag==1)
+    {
+      if(eflag==0)
+      {
+        document.getElementById('email').style.border="1px solid #ccc";
+        document.getElementById('emailError').innerHTML=("");
+      }
+      if(mflag==0)
+      {
+        document.getElementById('message').style.border="1px solid #ccc";
+        document.getElementById('messageError').innerHTML=("");
+      }
+      return false;
+    }
+
+    if(mflag==1)
+    {
+      if(eflag==0)
+      {
+        document.getElementById('email').style.border="1px solid #ccc";
+        document.getElementById('emailError').innerHTML=("");
+      }
+      if(nflag==0)
+      {
+        document.getElementById('name').style.border="1px solid #ccc";
+        document.getElementById('nameError').innerHTML=("");
+      }
+      return false;
+    }
+
+    else
+        {
+          document.getElementById('successful').innerHTML=("&#x2714; Successfully sent!");
+          document.getElementById('successful').className = "showSuccess";
+          document.getElementById('email').style.border="1px solid #ccc";
+          document.getElementById('emailError').innerHTML=("");
+          document.getElementById('name').style.border="1px solid #ccc";
+          document.getElementById('nameError').innerHTML=("");
+          document.getElementById('message').style.border="1px solid #ccc";
+          document.getElementById('messageError').innerHTML=("");
+          return false;
+        }
+  }
+  </script>
+
+</body>
+</html>

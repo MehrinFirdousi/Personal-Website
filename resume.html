@@ -1,0 +1,221 @@
+<html>
+<head>
+  <title>Resume | Hiraeth</title>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="all\menu.css" type="text/css" charset="utf-8" />
+  <script type="text/javascript" src="all\animateOnScroll.js"></script>
+  <style>
+    body{
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ded2ce;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0px;
+      letter-spacing: 0.5px;
+      color: white;
+      font-weight: 50px;
+    }
+
+    .left {
+      background-color: #50473f;
+      width: 18%;
+      padding: 90px;
+      height: 100%;
+      position: fixed;
+      animation: moveLeft 1.5s;
+      animation-fill-mode: forwards;
+    }
+
+    .right {
+      background-color:#ded2ce;
+      margin-left: 29.8%;
+      width: 58.35%;
+      padding: 90px;
+      height: 142%;
+      color:#462a24;
+    }
+
+    @keyframes moveLeft {
+      from {left: -18%;}
+      to {left: 0%;}
+    }
+
+    #pfp{
+      border-radius: 150px;
+      margin-left:-5.5%;
+      margin-top: 10%;
+    }
+
+    .myname{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: lighter;
+      margin: 20 0 0 -5;
+      font-size: 35px;
+      width: 150%;
+      color:#dcc7ad
+    }
+
+    .contact {
+      border-left: 4px solid #ded2ce;
+      padding-left: 20px;
+      margin-left: -5%;
+    }
+
+    hr{
+      width: 5%;
+      height:4px;
+      margin-left: -0.01%;
+      background-color: #55473A;
+      border:0px;
+      opacity: 0.7;
+    }
+
+    h1{
+      font-family: 'Alegreya Sans SC', 'Calibri';
+      font-weight: lighter;
+      color: black;
+    }
+
+    p{
+      text-align: justify;
+      color: black;
+    }
+
+    .meter {
+    	height: 12px;
+    	position: relative;
+    	background: #50473f;
+    	border-radius: 10px;
+    	padding: 4px;
+      width: 50%;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    .meter .toAnimate {
+      display: block;
+      height: 100%;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      background-color: #c9b4a1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .isVisible {
+      animation: expandWidth 1.2s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes expandWidth {
+       from { width: 0%; }
+       to { width: inline; }
+    }
+</style>
+</head>
+<body>
+    <div class="left">
+      <img id="pfp" src="resumecontent\me2.jpg" width="300px" height="300px">
+      <div class="myname">Mehrin Firdousi</div>
+      <center><span style="font-size: 22px;">CS Student</span></center>
+      <div style="padding-top: 35%;">
+        <div class="contact">
+          <h3 style="color:#dcc7ad;">Contact</h3>
+          <span>&#9993; mf402@uowmail.edu.au</span><br />
+          <span>&#9743; 050-8934243</span><br />
+          <span>&#9746; P. O. Box: 743</span><br />
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <h1>Personal Profile</h2>
+      <hr />
+      <p>I am a Computer Science student, majoring in Cyber Security. Besides my major, I also specialize in areas of graphic design, traditional art, photography and instrumental music.
+      </p>
+      <h1>Education &amp; Qualifications</h2>
+      <hr />
+      <ul>
+        <li>Abu Dhabi Indian School, Abu Dhabi
+          <ul><br />
+            <li>Secondary School Certificate - Grade X CGPA - 10/10</li>
+            <li>Higher Secondary Certificate - Grade XII Percentage - 87.4%</li>
+          </ul>
+        </li><br />
+        <li>University of Wollongong Dubai (Current)</li>
+        <li>42 Abu Dhabi School (Recruited)</li>
+      </ul>
+      <h1>Work Experience</h2>
+      <hr />
+      <ul>
+        <li>Vice President of School Art Club (2017-2018)</li>
+        <li>Technical Coordinator of School Art Club (2018-2019)</li>
+        <li>Led a number of art projects for school events</li>
+        <li>Worked as photographer for TEDx events and Inter-School Competitions</li>
+        <li>Created content for the school website</li>
+        <li>Created tribute video for Old Age Home Building Project in Kerala, India</li>
+        <li>Worked as an Arabic tutor for Grade 1</li>
+      </ul>
+      <h1>Notable skills / Hobbies</h2>
+      <hr />
+      <ul>
+        <li>Communication<br />
+          <div class="meter">
+            <span class="toAnimate" style="width: 72%"></span>
+          </div>
+        </li>
+        <li>Critical-thinking and analytical skills<br />
+          <div class="meter">
+            <span class="toAnimate" style="width: 88%"></span>
+          </div>
+        </li>
+        <li>Listening<br />
+          <div class="meter">
+            <span class="toAnimate" style="width: 91%"></span>
+          </div>
+        </li>
+        <li>Time-management<br />
+          <div class="meter">
+            <span class="toAnimate" style="width: 62%"></span>
+          </div>
+        </li>
+        <li>Creativity<br />
+          <div class="meter">
+            <span class="toAnimate" style="width: 84%"></span>
+          </div>
+        </li>
+        <li>Piano and other instrumental music<br />
+          <div class="meter">
+            <span class="toAnimate" style="width: 65%"></span>
+          </div>
+        </li>
+        <li>Fine art and illustration<br />
+          <div class="meter">
+            <span class="toAnimate" style="width: 72%"></span>
+          </div>
+        </li>
+    </div>
+
+    <div class="menu">
+      <a href="index.html" class="name tooltip" target="_self">
+        <img src="all\Hiraeth-1.svg" height="50px" width="100px">
+        <span class="tooltiptext">Home</span>
+      </a>
+      <div class="options">
+        <a href="aboutme.html" target="_self" class="links">About Me</a>
+        <a href="resume.html" target="_self" style="color:#ffda6b;" class="links">Resume</a>
+        <a href="artgallery.html" target="_self" class="links">Art Gallery</a>
+        <a href="projects.xml" target="_self" class="links">Projects</a>
+        <a href="music.html" target="_self" class="links">Music</a>
+        <a href="reviews.html" target="_self" class="links">Reviews</a>
+        <a href="photography.html" target="_self" class="links">Photography</a>
+      </div>
+      <a href="https://www.instagram.com/hir.aeth/" target="_blank" class="links" style="margin:30 0 0 90; height:25px; width:25px;">
+        <img src="all\instalogo-white.svg" height="25px" width="25px" style="padding-top:18;">
+      </a>
+    </div>
+</body>
+</html>

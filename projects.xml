@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="projectsstyle.xsl" type="text/xsl"?>
+<!DOCTYPE projects [
+  <!ELEMENT projectList (project+)>
+  <!ELEMENT project (name, year, image, description, noOfMembers, imgDesc)>
+  <!ELEMENT year (#PCDATA)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT image (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+  <!ELEMENT imgDesc (#PCDATA)>
+  <!ELEMENT noOfMembers (#PCDATA)>
+]>
+
+<projectList>
+
+  <project>
+    <name>Human Computer Interaction - iCare EHR</name>
+    <year>June - July (2020)</year>
+    <image>projectscontent\project1.jpg</image>
+    <description>We designed a new system (the user interfaces and interactions) that compensates for the HCI errors and issues we found from our research about the kinds of electronic healthcare record (EHR) systems that are currently being used in the healthcare sector. We managed to certify that the new system follows all necessary design guidelines and aids the user in fulfilling their tasks seamlessly with complete user satisfaction. </description>
+    <noOfMembers>4</noOfMembers>
+    <imgDesc>Home screen of the medical staff member currently logged in to the EHR (in dark mode)</imgDesc>
+  </project>
+
+  <project>
+    <name>Networks and Communication - UOWD expansion network solution</name>
+    <year>February - April (2020)</year>
+    <image>projectscontent\project3.jpg</image>
+    <description>Given the scenario of a new campus of UOWD opening in the Abu Dhabi emirate, we proposed a networking infrastructure solution taking into account the all the new equipment/facilities requirements, as well as expectations of staff and students. A cost analysis was conducted, followed by a simulation and testing of the newly proposed design, and finally concluding on future improvements.</description>
+    <noOfMembers>3</noOfMembers>
+    <imgDesc>Network design topology overview of the second floor, data-center, and part of the first floor</imgDesc>
+  </project>
+
+  <project>
+    <name>System Analysis and Design - Bon Vivant Airline Catering</name>
+    <year>September - December (2019)</year>
+    <image>projectscontent\project22.jpg</image>
+    <description>This project was to analyse the problems prevalent in current airline catering service systems and devise solutions for creating a new information system, to be used by a hypothetical company in the same field. </description>
+    <noOfMembers>5</noOfMembers>
+    <imgDesc>System interface output of an order made by customer</imgDesc>
+  </project>
+
+  <project>
+    <name>Data management and Security</name>
+    <year>February - April (2020)</year>
+    <image>projectscontent\project4.jpg</image>
+    <description>We developed a digitized database using SQL for a hypothetical university based in Abu Dhabi. The new database system serves the purpose of enrolling students in their subjects, ensuring all data integrity constraints. </description>
+    <noOfMembers>3</noOfMembers>
+    <imgDesc>Conceptual model of proposed database design</imgDesc>
+  </project>
+
+  <project>
+    <name>C++ investigatory project - ArtHub Online Art Store</name>
+    <year>November - January (2018-2019)</year>
+    <image>projectscontent\project5.jpg</image>
+    <description>This was my high-school senior year Computer Science project. We developed a terminal application running on a local database file, programmed using C++. It was a menu-driven online art store, displaying items for a customer to purchase. In addition to the customer's end, the administrator's domain was also developed, to manage customer records and add/modify/remove items in the store. </description>
+    <noOfMembers>3</noOfMembers>
+    <imgDesc>Sample output screen of the bill shown to a customer post purchase</imgDesc>
+  </project>
+
+</projectList>
